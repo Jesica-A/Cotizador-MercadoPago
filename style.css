@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #ffed4d;
+  color: #2D3277;
+  min-height: 100vh;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #2D3277;
+  opacity: 0.8;
+}
+
+.input-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(45, 50, 119, 0.12);
+  margin-bottom: 18px;
+}
+
+.input-card label {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #F5F5F5;
+  border: 2px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  transition: border-color 0.2s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #2D3277;
+}
+
+.currency {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-right: 8px;
+  color: #2D3277;
+}
+
+#efectivo {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2D3277;
+  outline: none;
+  width: 100%;
+}
+
+#efectivo::placeholder {
+  color: #B0B0B0;
+  font-weight: 400;
+}
+
+#efectivo::-webkit-outer-spin-button,
+#efectivo::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#efectivo[type=number] {
+  -moz-appearance: textfield;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(45, 50, 119, 0.12);
+  margin-bottom: 16px;
+}
+
+.resumen .fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.resumen .fila:last-child {
+  border-bottom: none;
+}
+
+.resumen .fila.destacada {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.label {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: #2D3277;
+  opacity: 0.75;
+  font-weight: 600;
+}
+
+.valor {
+  font-weight: 600;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+/* Estilos de la lista de cuotas */
+.lista-cuotas {
+  list-style: none;
+}
+
+.lista-cuotas li {
+  display: flex;
+  flex-direction: row; /* Elementos en horizontal */
+  justify-content: space-between; /* Uno a la izquierda y otro a la derecha */
+  align-items: center; /* Centrado verticalmente */
+  padding: 14px 0;
+  border-bottom: 1px solid #FFE600;
+}
+
+.lista-cuotas li:last-child {
+  border-bottom: none;
+}
+
+.lista-cuotas li .cuota-detalle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2D3277;
+}
+
+.lista-cuotas li .total-detalle {
+  font-size: 0.85rem;
+  color: black;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase; /* Para que el TOTAL resalte */
+  background: #f5f5f5; /* Un amarillo muy bajito para resaltar */
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Contenedor del posnet a la derecha */
+.fila-posnet {
+  display: flex;
+  flex-direction: column; /* Pone el texto arriba del monto */
+  align-items: flex-end; /* Alinea todo a la derecha */
+  text-align: right;
+}
+
+.etiqueta-posnet {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #2D3277;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+
+.monto-posnet {
+  font-size: 1.2rem; /* Mantiene el monto grande */
+  font-weight: 800;
+  color: #2D3277;
+}
+
+.btn-whatsapp {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: #2D3277;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.2s;
+  margin-top: 4px;
+}
+
+.btn-whatsapp:hover {
+  background: #1F2459;
+}
+
+.btn-whatsapp:active {
+  transform: scale(0.98);
+}
+
+.feedback {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #2D3277;
+}
+
+/* Estilos del desplegable de costos */
+.detalle-costos {
+  margin-top: 20px;
+  background: #fbf9ef;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.85rem;
+}
+
+.detalle-costos summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2D3277;
+  outline: none;
+}
+
+.detalle-contenido {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(45, 50, 119, 0.1);
+}
+
+.costo-fila {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #2D3277;
+}
+
+.costo-fila span:last-child {
+  font-weight: 600;
+}
+
+.detalle-contenido .nota {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

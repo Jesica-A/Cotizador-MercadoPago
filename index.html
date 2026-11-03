@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador Mercado Pago</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>COTIZADOR DE CUOTAS</h1>
+      <p class="subtitle">Ingresá el monto en efectivo que querés recibir</p>
+    </header>
+
+    <section class="input-card">
+      <label for="efectivo">Monto en efectivo</label>
+      <div class="input-wrapper">
+        <span class="currency">$</span>
+        <input
+          type="number"
+          id="efectivo"
+          placeholder="50000"
+          inputmode="numeric"
+          min="0"
+          step="100"
+        >
+      </div>
+    </section>
+
+    <section id="resultado" class="hidden">
+      <div class="card resumen">
+        <div class="fila">
+          <span class="label">EFECTIVO</span>
+          <span class="valor" id="r-efectivo">—</span>
+        </div>
+        <div class="fila destacada">
+          <span class="label">PRECIO LISTA</span>
+          <span class="valor" id="r-precio-lista">—</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Planes de pago</h2>
+        <ul id="lista-cuotas" class="lista-cuotas"></ul>
+      </div>
+
+      <button id="btn-whatsapp" class="btn-whatsapp">
+        📋 Copiar mensaje para WhatsApp
+      </button>
+
+      <p id="feedback" class="feedback hidden">¡Copiado!</p>
+
+      <!-- Desplegable de costos mejorado -->
+      <details class="detalle-costos">
+        <summary>Detalle de costos de la app</summary>
+        <div class="detalle-contenido" id="contenido-costos">
+          <!-- Lo llenamos con JS -->
+        </div>
+      </details>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
